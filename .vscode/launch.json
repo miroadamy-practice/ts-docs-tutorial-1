@@ -22,7 +22,15 @@
         "args": [
             "${workspaceFolder}/helloworld.ts"
         ]
-    }
+    },
+    {
+        "type": "pwa-chrome",
+        "request": "launch",
+        "name": "Launch chrome against localhost",
+        "preLaunchTask": "tsc: build - tsconfig.json",
+        "url": "file:///Users/miroadamy/prj/ts-docs-tutorial-1/helloweb.html",
+        "webRoot": "${workspaceFolder}"
+      }
 
     ]
   }
