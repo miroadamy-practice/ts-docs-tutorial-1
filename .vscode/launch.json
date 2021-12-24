@@ -11,6 +11,18 @@
         "program": "${workspaceFolder}/helloworld.ts",
         "preLaunchTask": "tsc: build - tsconfig.json",
         "outFiles": ["${workspaceFolder}/out/**/*.js"]
-      }
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug server",
+        //"runtimeExecutable": "node",
+        //"runtimeVersion": "16.13.1",
+        "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+        "args": [
+            "${workspaceFolder}/helloworld.ts"
+        ]
+    }
+
     ]
   }
